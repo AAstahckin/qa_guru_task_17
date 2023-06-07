@@ -37,7 +37,7 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
 
-        if (System.getProperty("selenide_remote") != null) {
+        if (config.isRemote()) {
             Attach.addVideo();
         }
     }
